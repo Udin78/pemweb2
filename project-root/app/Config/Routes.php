@@ -12,5 +12,5 @@ $routes->get('/books/create', 'Books::create');
 $routes->get('/books/edit(:segment)', 'Books::edit/$1');
 $routes->get('books/save', 'Books::save');
 $routes->delete('/books/(:num)', 'Books::delete/$1');
-
+$routes->get('/books/edit/(:segment)', 'Books::edit/$1');
 $routes->get('/books/(:any)', 'Books::detail/$1');

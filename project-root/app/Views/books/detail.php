@@ -12,24 +12,25 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title"><?= $buku['judul']; ?></h5>
-                            <p class="card-text"><b>Penulis : </b><?= $buku['penulis']; ?></p>
-                            <p class="card-text"><small class="text-body-secondary"><b>Penerbit : </b><?= $buku['penerbit']; ?></small></p>
+                            <h5 class="card-title">
+                                <?= $buku['judul']; ?>
+                            </h5>
+                            <p class="card-text"><b>Penulis : </b><?= $buku['penulis']; ?>
+                            </p>
+                            <p class="card-text"><small class="text-body-secondary"><b>Penerbit : </b>
+                                    <?= $buku['penerbit']; ?></small></p>
 
-                            <a href="#" class="btn btn-warning">Ubah</a>
-                            <form action="/books/<?= $buku['id']; ?>" method="post" class="d-inline">
-                                <?= csrf_field(); ?>
-                                <input type="hidden" name="_method" value="delete">
-                                <buton type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin menghapus data ini?')">Hapus</buton>
-                            </form>
-
-                            <br><br>
-                            <a href="/books" class="btn btn-secondary">Kembali ke daftar buku</a>
+                            <a href="/books/edit/<?= $buku['slug']; ?>" class="btn btn-warning">Ubah</a>
+                            <div class="row g-0">
+                                <form action="/books/<?= $buku['id']; ?>" method="post" class="d-inline">
+                                    <?= csrf_field(); ?>
+                                    <input type="hidden" name="_method" value="delete">
+                                    <button type="submit" class="btn btn-danger"
+                                        onclick="return confirm('apakah andayakin menghapus data ini?')">Hapus</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<?= $this->endSection(); ?>
+            <?= $this->endSection(); ?>
