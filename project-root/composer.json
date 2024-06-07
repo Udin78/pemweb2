@@ -14,12 +14,12 @@
         "ext-intl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
+        "fakerphp/faker": "^1.23",
         "laminas/laminas-escaper": "^2.9",
         "psr/log": "^1.1"
     },
     "require-dev": {
         "codeigniter/coding-standard": "^1.7",
-        "fakerphp/faker": "^1.9",
         "friendsofphp/php-cs-fixer": "^3.47.1",
         "kint-php/kint": "^5.0.4",
         "mikey179/vfsstream": "^1.6",
